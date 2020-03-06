@@ -2,6 +2,6 @@
   "name": "MongoTutorial",
   "version": "1.0.0",
   "dependencies": {
-
+    "mongodb": "^3.5.4"
   }
 }
