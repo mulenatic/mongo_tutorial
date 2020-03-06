@@ -8,10 +8,10 @@ MongoClient.connect(url,
     
     var dbo = db.db("mongo_tutorial");
        
-    dbo.collection("customers").findOne({}, function(err, result) {
+    dbo.collection("customers").find({}).toArray(function(err, result) {
       if (err) throw err;
       
-      console.log(result.name);
+      console.log(result);
     })
     
     db.close;
