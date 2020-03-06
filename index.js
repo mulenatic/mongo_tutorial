@@ -8,12 +8,16 @@ MongoClient.connect(url,
     
     var dbo = db.db("mongo_tutorial");
     
-    dbo.createCollection("customers", function(err, res) {
+    var myObj = { 
+      name: "Company Inc", address: "Highway 37"
+    };
+    
+    dbo.collection("customers").insertOne(myObj, function(err, res) {
       if (err) throw err;
-      console.log("Collection created");
+      
+      console.log("1 document inserted");
     })
     
-    console.log("Database created!");
     db.close;
   }
 )
