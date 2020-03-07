@@ -8,10 +8,10 @@ MongoClient
 		 if(err) throw err;
 		 
 		 var dbo = db.db("mongo_tutorial");
-		 var query = { address: /^S/ };
+		 var mysort = { name: 1 };
 		 
 		 dbo.collection("customers")
-		    .find(query).toArray(function(err, result) {
+		    .find().sort(mysort).toArray(function(err, result) {
 		     if (err) throw err;
 		     
 		     console.log(result);
