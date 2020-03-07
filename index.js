@@ -8,7 +8,7 @@ MongoClient
 		 if(err) throw err;
 		 
 		 var dbo = db.db("mongo_tutorial");
-		 var query = { address: "Park Lane 38" };
+		 var query = { address: /^S/ };
 		 
 		 dbo.collection("customers")
 		    .find(query).toArray(function(err, result) {
