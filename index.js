@@ -8,7 +8,7 @@ MongoClient
 		 if(err) throw err;
 		 
 		 var dbo = db.db("mongo_tutorial");
-		 var mysort = { name: 1 };
+		 var mysort = { name: -1 };
 		 
 		 dbo.collection("customers")
 		    .find().sort(mysort).toArray(function(err, result) {
